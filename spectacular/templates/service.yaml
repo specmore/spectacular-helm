@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spectacular-auth-{{.Release.Name}}
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 8080
+  selector:
+    app: spectacular-auth-{{.Release.Name}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spectacular-backend-{{.Release.Name}}
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80 
+  selector:
+      app: spectacular-backend-{{.Release.Name}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: spectacular-web-{{.Release.Name}}
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 80 
+  selector:
+      app: spectacular-web-{{.Release.Name}}
