@@ -1,0 +1,16 @@
+apiVersion: v2
+name: Spectacular
+version: 0.1.0
+description: Spectacular helps to make the change review process for interface specifications more visible and organised, resulting in the healthier evolution of interfaces. Ultimately fostering an "API First" culture.
+keywords:
+  - interface-design
+  - architecture
+  - api-first
+  - api
+  - tool
+  - openapi
+home: https://github.com/specmore/spectacular
+sources:
+  - https://github.com/specmore/spectacular
+  - https://github.com/specmore/spectacular-helm
+appVersion: 0.1.0
