@@ -1,0 +1,7 @@
+apiVersion: v1
+data:
+  app-id: {{ required "A githubAppId is required!" .Values.githubAppId | quote  }}
+  installation-id: {{ required "A githubAppInstallationId is required!" .Values.githubAppInstallationId | quote  }}
+kind: ConfigMap
+metadata:
+  name: github-app-config-{{.Release.Name}}
