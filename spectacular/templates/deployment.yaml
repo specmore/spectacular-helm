@@ -18,7 +18,7 @@ spec:
             - containerPort: 8080
           env:
             - name: LOGINSRV_COOKIE_SECURE
-              value: "false"
+              value: "true"
             - name: LOGINSRV_GITHUB
               valueFrom:
                 secretKeyRef:
