@@ -61,7 +61,7 @@ spec:
             - name: GITHUB_APP_ID
               valueFrom:
                 configMapKeyRef:
-                  name: github-app-{{.Release.Name}}
+                  name: github-app-config-{{.Release.Name}}
                   key: app-id
             - name: JWT_SHARED_SECRET
               valueFrom:
@@ -113,7 +113,7 @@ spec:
             - name: GITHUB_APP_INSTALLATION_ID
               valueFrom:
                 configMapKeyRef:
-                  name: github-app-{{.Release.Name}}
+                  name: github-app-config-{{.Release.Name}}
                   key: installation-id
           command: ["/bin/sh"]
           args: ["-c", "envsubst '$${API_LOCATION},$${AUTH_LOCATION},$${GITHUB_APP_INSTALLATION_ID}' < /etc/nginx/conf.d/web.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"]
