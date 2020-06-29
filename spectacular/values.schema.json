@@ -49,6 +49,10 @@
       "githubAppPrivateKey": {
           "type": "string",
           "description": "(Required) Sets the file contents of the GITHUB_APP_PRIVATE_KEY_FILE_PATH environment variable config value. Set according to the generated private key downloaded from your GitHub App page."
+      },
+      "managedCertificate": {
+          "type": "string",
+          "description": "(Optional) The name of a GCP managed certificate to be used with the ingress."
       }
   }
 }

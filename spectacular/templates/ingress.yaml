@@ -2,11 +2,10 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: spectacular-ingress-{{.Release.Name}}
-  {{ if or .Values.managedCertificate }}
+  {{ if .Values.managedCertificate }}
   annotations:
-    {{ if .Values.managedCertificate }}
     networking.gke.io/managed-certificates: {{ .Values.managedCertificate | quote  }}
-    {{ end }}
+    kubernetes.io/ingress.allow-http: "false"
   {{ end }}
 spec:
   backend:
