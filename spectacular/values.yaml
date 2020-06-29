@@ -1,7 +1,7 @@
 # githubAppId (Required) Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page.
-githubAppId: 70007
+githubAppId: '70007'
 # githubAppInstallationId (Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of our GitHub App.
-githubAppInstallationId: 9995096
+githubAppInstallationId: '9995096'
 # githubClientId (Required) Sets the `client_id` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page.
 githubClientId: Iv1.a37ef4ddfbd85d96
 # githubClientId (Required) Sets the `client_secret` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page.

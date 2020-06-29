@@ -21,14 +21,14 @@
   ],
   "properties": {
       "githubAppId": {
-          "type": "integer",
+          "type": "string",
           "description": "(Required) Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page.",
-          "examples": [ 70007 ]
+          "examples": [ "70007" ]
       },
       "githubAppInstallationId": {
-          "type": "integer",
+          "type": "string",
           "description": "(Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of our GitHub App.",
-          "examples": [ 9995096 ]
+          "examples": [ "9995096" ]
       },
       "githubClientId": {
           "type": "string",
