@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "Spectacular Helm Chart values schema",
+  "default": {},
+  "examples": [
+      {
+          "githubAppId": 70007,
+          "githubAppInstallationId": 9995096,
+          "githubClientId": "Iv1.a37ef4ddfbd85d96",
+          "githubClientSecret": "46474a20eda30ee93df8b2e33fb448e1f482a2bf",
+          "authJwtSharedSecret": "57db0a7b4cbf1182832f377239a25a52"
+      }
+  ],
+  "required": [
+      "githubAppId",
+      "githubAppInstallationId",
+      "githubClientId",
+      "githubClientSecret"
+  ],
+  "properties": {
+      "githubAppId": {
+          "type": "integer",
+          "description": "(Required) Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page.",
+          "examples": [ 70007 ]
+      },
+      "githubAppInstallationId": {
+          "type": "integer",
+          "description": "(Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of our GitHub App.",
+          "examples": [ 9995096 ]
+      },
+      "githubClientId": {
+          "type": "string",
+          "description": "(Required) Sets the `client_id` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page.",
+          "examples": [ "Iv1.a37ef4ddfbd85d96" ]
+      },
+      "githubClientSecret": {
+          "type": "string",
+          "description": "(Required) Sets the `client_secret` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page.",
+          "examples": [ "46474a20eda30ee93df8b2e33fb448e1f482a2bf" ]
+      },
+      "authJwtSharedSecret": {
+          "type": "string",
+          "description": "(Optional) Sets the LOGINSRV_JWT_SECRET and JWT_SHARED_SECRET environment variable config values. Needs to be a 32 byte value. Will be generated if not set.",
+          "examples": [ "57db0a7b4cbf1182832f377239a25a52" ]
+      }
+  }
+}
