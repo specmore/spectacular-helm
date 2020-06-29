@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: spectacular-auth-{{.Release.Name}}
 spec:
-  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080
@@ -15,7 +14,6 @@ kind: Service
 metadata:
   name: spectacular-backend-{{.Release.Name}}
 spec:
-  type: LoadBalancer
   ports:
     - port: 80 
   selector:
