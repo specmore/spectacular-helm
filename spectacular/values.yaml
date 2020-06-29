@@ -1,5 +1,10 @@
-## GitHub App config
-# githubAppId: '1234'
-# githubAppInstallationId: '123456'
-# githubClientId: 'Iv1.1234abcd'
-# githubClientSecret: '1234abcd5678efgh'
+# githubAppId (Required) Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page.
+githubAppId: 70007
+# githubAppInstallationId (Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of our GitHub App.
+githubAppInstallationId: 9995096
+# githubClientId (Required) Sets the `client_id` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page.
+githubClientId: Iv1.a37ef4ddfbd85d96
+# githubClientId (Required) Sets the `client_secret` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page.
+githubClientSecret: 46474a20eda30ee93df8b2e33fb448e1f482a2bf
+# authJwtSharedSecret (Optional) Sets the LOGINSRV_JWT_SECRET and JWT_SHARED_SECRET environment variable config values. Needs to be a 32 byte value. Will be generated if not set.
+authJwtSharedSecret: 57db0a7b4cbf1182832f377239a25a52
