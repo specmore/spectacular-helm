@@ -4,6 +4,8 @@ metadata:
   name: spectacular-auth-{{.Release.Name}}
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
@@ -41,6 +43,8 @@ metadata:
   name: spectacular-backend-{{.Release.Name}}
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
@@ -89,6 +93,8 @@ metadata:
   name: spectacular-web-{{.Release.Name}}
 spec:
   replicas: 1
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
