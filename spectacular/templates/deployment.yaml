@@ -20,12 +20,12 @@ spec:
             - name: LOGINSRV_GITHUB
               valueFrom:
                 secretKeyRef:
-                  name: github-oauth
+                  name: github-oauth-{{.Release.Name}}
                   key: oauth-config
             - name: LOGINSRV_JWT_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: auth-keys
+                  name: auth-keys-{{.Release.Name}}
                   key: shared-signing-key
           resources:
             requests:
@@ -57,12 +57,12 @@ spec:
             - name: GITHUB_APP_ID
               valueFrom:
                 configMapKeyRef:
-                  name: github-app
+                  name: github-app-{{.Release.Name}}
                   key: app-id
             - name: JWT_SHARED_SECRET
               valueFrom:
                 secretKeyRef:
-                  name: auth-keys
+                  name: auth-keys-{{.Release.Name}}
                   key: shared-signing-key
           volumeMounts:
             - name: private-key-volume
@@ -78,7 +78,7 @@ spec:
       volumes:
       - name: private-key-volume
         secret:
-          secretName: github-app
+          secretName: github-app-{{.Release.Name}}
           items:
           - key: private-key.pem
             path: private-key.pem
@@ -107,7 +107,7 @@ spec:
             - name: GITHUB_APP_INSTALLATION_ID
               valueFrom:
                 configMapKeyRef:
-                  name: github-app
+                  name: github-app-{{.Release.Name}}
                   key: installation-id
           command: ["/bin/sh"]
           args: ["-c", "envsubst '$${API_LOCATION},$${AUTH_LOCATION},$${GITHUB_APP_INSTALLATION_ID}' < /etc/nginx/conf.d/web.template > /etc/nginx/conf.d/default.conf && exec nginx -g 'daemon off;'"]
