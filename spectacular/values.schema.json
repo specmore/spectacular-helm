@@ -53,6 +53,10 @@
       "managedCertificate": {
           "type": "string",
           "description": "(Optional) The name of a GCP managed certificate to be used with the ingress."
+      },
+      "staticIpName": {
+          "type": "string",
+          "description": "(Optional) The name of a reserved global static IP address to be used with the ingress."
       }
   }
 }
