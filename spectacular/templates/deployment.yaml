@@ -75,10 +75,10 @@ spec:
           resources:
             requests:
               cpu: 50m
-              memory: 384Mi
+              memory: 256Mi
             limits:
               cpu: 500m
-              memory: 1024Mi
+              memory: 512Mi
       volumes:
       - name: private-key-volume
         secret:
