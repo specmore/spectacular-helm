@@ -107,9 +107,9 @@ spec:
             - containerPort: 80
           env:
             - name: API_LOCATION
-              value: "http://spectacular-backend"
+              value: "http://spectacular-backend-{{.Release.Name}}"
             - name: AUTH_LOCATION
-              value: "http://spectacular-auth"
+              value: "http://spectacular-auth-{{.Release.Name}}"
             - name: GITHUB_APP_INSTALLATION_ID
               valueFrom:
                 configMapKeyRef:
