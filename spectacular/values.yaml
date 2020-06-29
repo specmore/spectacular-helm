@@ -39,5 +39,3 @@ githubAppPrivateKey: |
   -----END RSA PRIVATE KEY-----
 # managedCertificate (Optional) The name of a GCP managed certificate to be used with the ingress.
 managedCertificate: spectacular-demo-certificate
-# staticIpName (Optional) The name of a reserved global static IP address to be used with the ingress.
-staticIpName: spectacular-demo-web
