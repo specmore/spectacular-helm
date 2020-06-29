@@ -48,7 +48,7 @@ spec:
     spec:
       containers:
         - name: spectacular-backend-{{.Release.Name}}
-          image: spectacular.azurecr.io/release-candidate/backend
+          image: specmore/spectacular-backend
           ports:
             - containerPort: 80
           env:
@@ -96,7 +96,7 @@ spec:
     spec:
       containers:
         - name: spectacular-web-{{.Release.Name}}
-          image: spectacular.azurecr.io/release-candidate/web
+          image: specmore/spectacular-web
           ports:
             - containerPort: 80
           env:
