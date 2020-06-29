@@ -17,7 +17,8 @@
       "githubAppId",
       "githubAppInstallationId",
       "githubClientId",
-      "githubClientSecret"
+      "githubClientSecret",
+      "githubAppPrivateKey"
   ],
   "properties": {
       "githubAppId": {
@@ -27,7 +28,7 @@
       },
       "githubAppInstallationId": {
           "type": "string",
-          "description": "(Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of our GitHub App.",
+          "description": "(Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of your GitHub App.",
           "examples": [ "9995096" ]
       },
       "githubClientId": {
@@ -44,6 +45,10 @@
           "type": "string",
           "description": "(Optional) Sets the LOGINSRV_JWT_SECRET and JWT_SHARED_SECRET environment variable config values. Needs to be a 32 byte value. Will be generated if not set.",
           "examples": [ "57db0a7b4cbf1182832f377239a25a52" ]
+      },
+      "githubAppPrivateKey": {
+          "type": "string",
+          "description": "(Required) Sets the file contents of the GITHUB_APP_PRIVATE_KEY_FILE_PATH environment variable config value. Set according to the generated private key downloaded from your GitHub App page."
       }
   }
 }
