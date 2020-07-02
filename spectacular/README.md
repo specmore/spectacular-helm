@@ -13,3 +13,10 @@ Spectacular helps to make the change review process for interface specifications
 Checkout Spectacular in action by visiting our Spectacular Demo website: [https://spectacular-demo.specmore.org/](https://spectacular-demo.specmore.org/)
 
 The demo website is integrated with the our own demo interface catalogues in the [specmore/spectacular-demo](https://github.com/specmore/spectacular-demo) GitHub repository.
+
+## Configuration
+The following table lists the configurable parameters of the Spectacular chart and their default values.
+
+Parameter | Description | Default
+--- | --- | ---
+`githubAppId` | Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page. | '70007'
