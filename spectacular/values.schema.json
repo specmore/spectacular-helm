@@ -57,6 +57,14 @@
       "staticIpName": {
           "type": "string",
           "description": "(Optional) The name of a reserved global static IP address to be used with the ingress."
+      },
+      "clusterIssuer": {
+          "type": "string",
+          "description": "(Optional) The name of a cert-manager 'clusterissuer' resource to use with the ingress to get a tls certificate issued."
+      },
+      "hostName": {
+          "type": "string",
+          "description": "(Optional) The hostname (DNS) to be used with the ingress rules."
       }
   }
 }

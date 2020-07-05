@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
   name: spectacular-ingress-{{.Release.Name}}
-  {{ if or .Values.managedCertificate .Values.staticIpName }}
+  {{ if or (or .Values.managedCertificate .Values.clusterIssuer) .Values.staticIpName }}
   annotations:
     {{ if .Values.staticIpName }}
     kubernetes.io/ingress.global-static-ip-name: {{ .Values.staticIpName | quote  }}
@@ -11,8 +11,28 @@ metadata:
     networking.gke.io/managed-certificates: {{ .Values.managedCertificate | quote  }}
     kubernetes.io/ingress.allow-http: "false"
     {{ end }}
+    {{ if .Values.clusterIssuer }}
+    cert-manager.io/cluster-issuer: {{ .Values.clusterIssuer | quote  }}
+    kubernetes.io/ingress.allow-http: "false"
+    {{ end }}
   {{ end }}
 spec:
+  {{ if .Values.hostName }}
+  tls:
+    - hosts:
+        - {{ .Values.hostName | quote  }}
+      secretName: spectacular-tls-secret-{{.Release.Name}}
+  rules:
+  - host: {{ .Values.hostName | quote  }}
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: spectacular-web-{{.Release.Name}}
+          servicePort: 80
+        
+  {{ else }}
   backend:
     serviceName: spectacular-web-{{.Release.Name}}
     servicePort: 80
+  {{ end }}
