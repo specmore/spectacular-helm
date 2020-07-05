@@ -25,5 +25,5 @@ Parameter | Description | Default
 `githubClientSecret` | (Required) Sets the `client_secret` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page. | `46474a20eda30ee93df8b2e33fb448e1f482a2bf` (our demo app)
 `authJwtSharedSecret` | (Optional) Sets the LOGINSRV_JWT_SECRET and JWT_SHARED_SECRET environment variable config values. Needs to be a 32 byte value. Will be generated if not set. | `57db0a7b4cbf1182832f377239a25a52`
 `githubAppPrivateKey` | (Required) Sets the file contents of the GITHUB_APP_PRIVATE_KEY_FILE_PATH environment variable config value. Set according to the generated private key downloaded from your GitHub App page. | **...** (a key for our demo app)
-`managedCertificate` | (Optional) The name of a GCP managed certificate to be used with the ingress. | `spectacular-demo-certificate` (our demo site default config)
-`staticIpName` | (Optional) The name of a reserved global static IP address to be used with the ingress. | `spectacular-demo-ip` (our demo site default config)
+`managedCertificate` | (Optional) The name of a GCP managed certificate to be used with the ingress. | none
+`staticIpName` | (Optional) The name of a reserved global static IP address to be used with the ingress. | none
