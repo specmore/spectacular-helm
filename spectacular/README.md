@@ -12,11 +12,18 @@ Spectacular helps to make the change review process for interface specifications
 ## View the Spectacular Demo
 Checkout Spectacular in action by visiting our Spectacular Demo website: [https://spectacular-demo.specmore.org/](https://spectacular-demo.specmore.org/)
 
-The demo website is integrated with the our own demo interface catalogues in the [specmore/spectacular-demo](https://github.com/specmore/spectacular-demo) GitHub repository.
+The demo website is deployed using this helm chart. It is configured to integrated with our own demo GitHub App installed on the [specmore/spectacular-demo](https://github.com/specmore/spectacular-demo) GitHub repository.
 
 ## Configuration
 The following table lists the configurable parameters of the Spectacular chart and their default values.
 
 Parameter | Description | Default
 --- | --- | ---
-`githubAppId` | Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page. | '70007'
+`githubAppId` | (Required) Sets the GITHUB_APP_ID environment variable config value. Set according to your GitHub App page. | `'70007'` (our demo app)
+`githubAppInstallationId` | (Required) Sets the GITHUB_APP_INSTALLATION_ID environment variable config value. Set according to your GitHub organisations installation of your GitHub App. | `'9995096'` (our demo installation)
+`githubClientId` | (Required) Sets the `client_id` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page. | `Iv1.a37ef4ddfbd85d96` (our demo app)
+`githubClientSecret` | (Required) Sets the `client_secret` part of the LOGINSRV_GITHUB environment variable config value. Set according to your GitHub App page. | `46474a20eda30ee93df8b2e33fb448e1f482a2bf` (our demo app)
+`authJwtSharedSecret` | (Optional) Sets the LOGINSRV_JWT_SECRET and JWT_SHARED_SECRET environment variable config values. Needs to be a 32 byte value. Will be generated if not set. | `57db0a7b4cbf1182832f377239a25a52`
+`githubAppPrivateKey` | (Required) Sets the file contents of the GITHUB_APP_PRIVATE_KEY_FILE_PATH environment variable config value. Set according to the generated private key downloaded from your GitHub App page. | **...** (a key for our demo app)
+`managedCertificate` | (Optional) The name of a GCP managed certificate to be used with the ingress. | `spectacular-demo-certificate` (our demo site default config)
+`staticIpName` | (Optional) The name of a reserved global static IP address to be used with the ingress. | `spectacular-demo-ip` (our demo site default config)
