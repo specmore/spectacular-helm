@@ -1,2 +1,2 @@
 # spectacular-helm
-Helm charts for the Spectucular tool
+Helm charts for the Spectacular tool
