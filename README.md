@@ -1,2 +1,2 @@
-# spectacular-helm
+# spectacular-helm &middot; [![Codefresh build status]( https://g.codefresh.io/api/badges/pipeline/specmore/Spectacular%20Chart%2FSpectacular%20Chart%20Publish?key=eyJhbGciOiJIUzI1NiJ9.NWYwMWEzZTExNTRjZDcwYTZlNWMwMzE0.dNeuUadTko9Qn53oZkmLsKKkKhRfWy49BgutbQ2Jwws&type=cf-1)]( https%3A%2F%2Fg.codefresh.io%2Fpipelines%2FSpectacular%20Chart%20Publish%2Fbuilds%3Ffilter%3Dtrigger%3Abuild~Build%3Bpipeline%3A5f01aae83ba05b283bdc5d3b~Spectacular%20Chart%20Publish)
 Helm charts for the Spectacular tool
