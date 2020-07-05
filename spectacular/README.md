@@ -29,4 +29,15 @@ Parameter | Description | Default
 `staticIpName` | (Optional) The name of a reserved global static IP address to be used with the ingress. | none
 `clusterIssuer` | (Optional) The name of a cert-manager 'clusterissuer' resource to use with the ingress to get a tls certificate issued. | none
 `hostName` | (Optional) The hostname (DNS) to be used with the ingress rules. | none
-`releaseCandidateTag` | Optional) The tag of a release candidate build to be deployed. | none
+`releaseCandidateTag` | (Optional) The tag of a release candidate build to be deployed. | none
+
+## Application Version
+This chart is configured to deploy Spectacular v0.1.0.
+
+## Changelog
+### v0.2.0
+- Add `clusterIssuer` and `hostName` configuration values to configure ingress to support [cert-manager](https://cert-manager.io/) TLS certificates.
+- Add `releaseCandidateTag` configuration value for deploying release candidate images.
+
+### v0.1.0
+Initial release set to deploy Spectacular v0.1.0.
