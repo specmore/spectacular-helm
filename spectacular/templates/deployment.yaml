@@ -17,8 +17,10 @@ spec:
           ports:
             - containerPort: 8080
           env:
+            {{- if not (or .Values.managedCertificate .Values.clusterIssuer) }}
             - name: LOGINSRV_COOKIE_SECURE
-              value: "true"
+              value: "false"
+            {{- end }}
             - name: LOGINSRV_GITHUB
               valueFrom:
                 secretKeyRef:
