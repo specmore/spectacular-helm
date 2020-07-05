@@ -10,7 +10,7 @@ keywords:
   - api
   - tool
   - openapi
-home: https://github.com/specmore/spectacular
+home: https://github.com/specmore/spectacular-helm
 sources:
   - https://github.com/specmore/spectacular
   - https://github.com/specmore/spectacular-helm
