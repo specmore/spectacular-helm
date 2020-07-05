@@ -54,7 +54,11 @@ spec:
     spec:
       containers:
         - name: spectacular-backend-{{.Release.Name}}
+          {{- if .Values.releaseCandidateTag }}
+          image: specmore/spectacular-backend-release-candidate:{{ .Values.releaseCandidateTag }}
+          {{- else }}
           image: specmore/spectacular-backend:0.1.0
+          {{- end }}
           ports:
             - containerPort: 80
           env:
@@ -104,7 +108,11 @@ spec:
     spec:
       containers:
         - name: spectacular-web-{{.Release.Name}}
+          {{- if .Values.releaseCandidateTag }}
+          image: specmore/spectacular-web-release-candidate:{{ .Values.releaseCandidateTag }}
+          {{- else }}
           image: specmore/spectacular-web:0.1.0
+          {{- end }}
           ports:
             - containerPort: 80
           env:

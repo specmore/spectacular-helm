@@ -45,3 +45,5 @@ githubAppPrivateKey: |
 ## clusterIssuer: letsencrypt-prod
 # hostName (Optional) The hostname (DNS) to be used with the ingress rules.
 ## staticIpName: spectacular-demo.specmore.org
+# releaseCandidateTag (Optional) The tag of a release candidate build to be deployed.
+## releaseCandidateTag: 27

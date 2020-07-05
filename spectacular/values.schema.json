@@ -65,6 +65,10 @@
       "hostName": {
           "type": "string",
           "description": "(Optional) The hostname (DNS) to be used with the ingress rules."
+      },
+      "releaseCandidateTag": {
+          "type": "string",
+          "description": "(Optional) The tag of a release candidate build to be deployed."
       }
   }
 }
