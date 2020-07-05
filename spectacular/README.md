@@ -27,3 +27,6 @@ Parameter | Description | Default
 `githubAppPrivateKey` | (Required) Sets the file contents of the GITHUB_APP_PRIVATE_KEY_FILE_PATH environment variable config value. Set according to the generated private key downloaded from your GitHub App page. | **...** (a key for our demo app)
 `managedCertificate` | (Optional) The name of a GCP managed certificate to be used with the ingress. | none
 `staticIpName` | (Optional) The name of a reserved global static IP address to be used with the ingress. | none
+`clusterIssuer` | (Optional) The name of a cert-manager 'clusterissuer' resource to use with the ingress to get a tls certificate issued. | none
+`hostName` | (Optional) The hostname (DNS) to be used with the ingress rules. | none
+`releaseCandidateTag` | Optional) The tag of a release candidate build to be deployed. | none
