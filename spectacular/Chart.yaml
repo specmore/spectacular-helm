@@ -1,5 +1,5 @@
 apiVersion: v2
-name: Spectacular
+name: spectacular
 version: 0.1.0
 type: application
 description: Spectacular helps to make the change review process for interface specifications more visible and organised, resulting in the healthier evolution of interfaces. Ultimately fostering an "API First" culture.
