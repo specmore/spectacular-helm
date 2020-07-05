@@ -52,7 +52,7 @@ spec:
     spec:
       containers:
         - name: spectacular-backend-{{.Release.Name}}
-          image: specmore/spectacular-backend
+          image: specmore/spectacular-backend:0.1.0
           ports:
             - containerPort: 80
           env:
@@ -102,7 +102,7 @@ spec:
     spec:
       containers:
         - name: spectacular-web-{{.Release.Name}}
-          image: specmore/spectacular-web
+          image: specmore/spectacular-web:0.1.0
           ports:
             - containerPort: 80
           env:
