@@ -15,7 +15,7 @@ Checkout Spectacular in action by visiting our Spectacular Demo website: [https:
 The demo website is deployed using this helm chart. It is configured to integrated with our own demo GitHub App installed on the [specmore/spectacular-demo](https://github.com/specmore/spectacular-demo) GitHub repository.
 
 ## Configuration
-The following table lists the configurable parameters of the Spectacular chart and their default values.
+The following table lists the configuration values that can be set when releasing the Spectacular chart. Please see the Spectacular app's [Configuration guide](https://github.com/specmore/spectacular/blob/master/docs/configuration.md) for more information on how to set the require environment variables.
 
 Parameter | Description | Default
 --- | --- | ---
