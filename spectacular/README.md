@@ -35,6 +35,9 @@ Parameter | Description | Default
 This chart is configured to deploy Spectacular v0.1.0.
 
 ## Changelog
+### v0.2.1
+- Change deployments to use new Spectacular app v0.1.1 images.
+
 ### v0.2.0
 - Add `clusterIssuer` and `hostName` configuration values to configure ingress to support [cert-manager](https://cert-manager.io/) TLS certificates.
 - Add `releaseCandidateTag` configuration value for deploying release candidate images.

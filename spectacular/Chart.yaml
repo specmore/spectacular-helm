@@ -14,4 +14,4 @@ home: https://github.com/specmore/spectacular-helm
 sources:
   - https://github.com/specmore/spectacular
   - https://github.com/specmore/spectacular-helm
-appVersion: 0.1.0
+appVersion: 0.1.1
