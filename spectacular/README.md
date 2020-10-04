@@ -37,7 +37,7 @@ This chart is configured to deploy Spectacular v0.1.0.
 ## Changelog
 ### v0.2.2
 - Change deployments to use new Spectacular app v0.1.2 images.
-- 
+
 ### v0.2.1
 - Change deployments to use new Spectacular app v0.1.1 images.
 
