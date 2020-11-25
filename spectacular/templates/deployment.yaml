@@ -57,7 +57,7 @@ spec:
           {{- if .Values.releaseCandidateTag }}
           image: specmore/spectacular-backend-release-candidate:{{ .Values.releaseCandidateTag }}
           {{- else }}
-          image: specmore/spectacular-backend:0.1.2
+          image: specmore/spectacular-backend:0.2.0
           {{- end }}
           ports:
             - containerPort: 80
@@ -111,7 +111,7 @@ spec:
           {{- if .Values.releaseCandidateTag }}
           image: specmore/spectacular-web-release-candidate:{{ .Values.releaseCandidateTag }}
           {{- else }}
-          image: specmore/spectacular-web:0.1.2
+          image: specmore/spectacular-web:0.2.0
           {{- end }}
           ports:
             - containerPort: 80
