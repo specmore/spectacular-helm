@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: spectacular-auth-{{.Release.Name}}
-          image: tarent/loginsrv:1.3.0
+          image: tarent/loginsrv:latest
           ports:
             - containerPort: 8080
           env:
@@ -57,7 +57,7 @@ spec:
           {{- if .Values.releaseCandidateTag }}
           image: specmore/spectacular-backend-release-candidate:{{ .Values.releaseCandidateTag }}
           {{- else }}
-          image: specmore/spectacular-backend:0.2.0
+          image: specmore/spectacular-backend:0.2.1
           {{- end }}
           ports:
             - containerPort: 80
@@ -111,7 +111,7 @@ spec:
           {{- if .Values.releaseCandidateTag }}
           image: specmore/spectacular-web-release-candidate:{{ .Values.releaseCandidateTag }}
           {{- else }}
-          image: specmore/spectacular-web:0.2.0
+          image: specmore/spectacular-web:0.2.1
           {{- end }}
           ports:
             - containerPort: 80
