@@ -35,6 +35,9 @@ Parameter | Description | Default
 This chart is configured to deploy Spectacular v0.1.0.
 
 ## Changelog
+### v0.2.5
+- Change deployments to use new Spectacular app v0.2.2 images.
+  
 ### v0.2.4
 - Change deployment to use Loginsrv release with `latest` tag.
 - Change deployments to use new Spectacular app v0.2.1 images.
